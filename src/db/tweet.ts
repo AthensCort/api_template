@@ -10,4 +10,4 @@ class TweetService{
     
 }
 
-export default TweetService;
+export default new TweetService();

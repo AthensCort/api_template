@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import TweetController from  "../controllers/tweet";
-import TweetService from "../db/tweet"; 
+import tweetService from "../db/tweet"; 
 
-const tweetController = new TweetController(TweetService);
+const tweetController = new TweetController(tweetService);
 
 class TweetHttpHandler{
     async getTweets(request: Request, response: Response, next: NextFunction){ // La función next es para pasar a la siguiente función 

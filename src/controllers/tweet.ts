@@ -1,8 +1,10 @@
 import TweetService from "../db/tweet";
 
 class TweetController{
-    service: TweetService; 
-    constructor(service: TweetService){
+
+    //agregando tye of pq marcaba error
+    service: typeof TweetService; 
+    constructor(service: typeof TweetService){
         this.service = service;
     }
 
