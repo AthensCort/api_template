@@ -1,32 +1,32 @@
 import { Request, Response, NextFunction } from "express";
-import TweetController from  "../controllers/tweet";
-import TweetService from "../db/user"; 
+import UserController from  "../controllers/user";
+import UserService from "../db/user"; 
 
-const tweetController = new TweetController(TweetService);
+const userController = new UserController(UserService);
 
-class TweetHttpHandler{
-    async getTweets(request: Request, response: Response, next: NextFunction){ // La función next es para pasar a la siguiente función 
+class UserHttpHandler{
+    async getUsers(request: Request, response: Response, next: NextFunction){ // La función next es para pasar a la siguiente función 
         try{
-            const tweets = await tweetController.getAllTweets();
-            response.json(tweets);
+            const users = await userController.getAllUsers();
+            response.json(users);
         } catch(error){
             next(error);
         }
     }
 
-    async getTweetById(request: Request, response: Response, next: NextFunction){
+    async getUserById(request: Request, response: Response, next: NextFunction){
 
     }
 
-    async updateTweet(request: Request, response: Response, next: NextFunction){
+    async updateUser(request: Request, response: Response, next: NextFunction){
 
     }
 
-    async deleteTweet(request: Request, response: Response, next: NextFunction){
+    async deleteUser(request: Request, response: Response, next: NextFunction){
 
     }
 }
 
-module.exports = new TweetHttpHandler();
+module.exports = new UserHttpHandler();
 
-export default TweetHttpHandler;
+export default UserHttpHandler;
