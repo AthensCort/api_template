@@ -27,6 +27,4 @@ class TweetHttpHandler{
     }
 }
 
-module.exports = new TweetHttpHandler();
-
 export default TweetHttpHandler;
