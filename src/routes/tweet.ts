@@ -1,5 +1,5 @@
 import express from 'express'
-import TweetHttpHandler from '../handlers/tweet.js';
+import TweetHttpHandler from '../handlers/tweet';
 
 const router = express.Router();
 const tweetHttpHandler = new TweetHttpHandler();
